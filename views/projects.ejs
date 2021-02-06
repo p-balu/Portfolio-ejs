@@ -1,0 +1,112 @@
+<%- include partials/header.ejs %> <%- include partials/mainNav.ejs %>
+
+<!--Projects Slideshow-->
+<main class="container">
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+      ></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="/Assets/images/project1.jpeg"
+          class="d-block w-100"
+          alt="project1"
+        />
+        <div
+          class="carousel-caption d-none d-md-block"
+          style="color: black; font-style: italic; position: initial"
+        >
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item">
+          <img
+            src="/Assets/images/project3.png"
+            class="d-block w-100"
+            alt="project3"
+          />
+        </div>
+        <div
+          class="carousel-caption d-none d-md-block"
+          style="color: black; font-style: italic; position: initial"
+        >
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/Assets/images/project2.png"
+          class="d-block w-100"
+          alt="project4"
+        />
+        <div
+          class="carousel-caption d-none d-md-block"
+          style="color: black; font-style: italic; position: initial"
+        >
+          <h5>Third slide label</h5>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </div>
+      </div>
+      <!-- <div class="carousel-item">
+      <img
+        src="/Assets/images/project4.png"
+        class="d-block"
+        style="width: 60%; height: 30rem"
+        alt="project4"
+      />
+      <div
+        class="carousel-caption d-none d-md-block"
+        style="color: black; font-style: italic; position: initial"
+      >
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div> -->
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="/Assets/images/project4.png"
+      role="button"
+      data-bs-slide="prev"
+      style="color: black; font-weight: 600"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="/Assets/images/project2.png"
+      role="button"
+      data-bs-slide="next"
+      style="color: black; font-weight: 600"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</main>
+
+<!--Script for slideshow-->
+<script src="type/javascript">
+  $('.carousel').carousel({
+    interval: 2000
+  })
+</script>
+
+<%- include partials/footerNav.ejs %> %> <%- include partials/footer.ejs %>
