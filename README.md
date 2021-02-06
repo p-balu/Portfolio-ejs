@@ -6,4 +6,4 @@
  
  ## start the script using 
  
- ### `npm start or yarn start or nodemon index.js`
+ ### `npm start or yarn start or nodemon server.js`
