@@ -1,5 +1,41 @@
 <%- include partials/header.ejs %> <%- include partials/mainNav.ejs %>
 
-<p>Welcome to <%= title %></p>
+<main class="container" style="margin-top: 2%; margin-bottom: 2%">
+  <h1 class="display-6" style="text-align: center">Services</h1>
+  <div style="display: flex; margin-top: 5%">
+    <div style="margin-top: 3rem">
+      <h3 class="my-2">Web Applications</h3>
+      <p class="my-2" style="line-height: 1.75rem">
+        Reactive Dashboards based on React.js, SEO Friendly Frontends, Mobile
+        Responsive Pages, Progressive Web Applications.
+      </p>
+    </div>
+    <div class="container">
+      <img
+        src="/Assets/images/web.jpg"
+        alt="web-image"
+        class="img-thumbnail"
+        style="max-height: 19rem; margin-left: 3rem"
+      />
+    </div>
+  </div>
+  <div style="display: flex; margin-top: 5%">
+    <div class="container">
+      <img
+        src="/Assets/images/Mobile.jpg"
+        alt="mobile-image"
+        class="img-thumbnail"
+        style="max-height: 19rem"
+      />
+    </div>
+    <div style="margin-top: 3rem; margin-left: -10rem">
+      <h3 class="my-2">Mobile Applications</h3>
+      <p class="my-2" style="line-height: 1.75rem">
+        I build native applications on Android and iOS using Java and React
+        Native and APIs which bring these applications to life.
+      </p>
+    </div>
+  </div>
+</main>
 
 <%- include partials/footerNav.ejs %> %> <%- include partials/footer.ejs %>
