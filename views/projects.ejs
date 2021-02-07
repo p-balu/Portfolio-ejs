@@ -15,29 +15,12 @@
     <ol class="carousel-indicators">
       <li
         data-target="#carouselExampleIndicators"
-        data-slide-to="0"
+        data-slide-to="1"
         class="active"
       ></li>
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="1"
-        style="background-color: black"
-      ></li>
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="2"
-        style="background-color: black"
-      ></li>
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="3"
-        style="background-color: black"
-      ></li>
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="4"
-        style="background-color: black"
-      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -49,9 +32,9 @@
         />
         <div
           class="carousel-caption d-none d-md-block"
-          style="color: black; font-style: italic; position: initial"
+          style="font-style: italic; position: initial"
         >
-          <h5 style="font-weight: 600">Near by Food places</h5>
+          <h5 style="font-weight: 600; color: #ffb700">Near by Food places</h5>
           <p style="font-weight: 500">
             An application where you will register and login and can check the
             ratings of the restaurant based on your location. You can also rate
@@ -68,9 +51,9 @@
         />
         <div
           class="carousel-caption d-none d-md-block"
-          style="color: black; font-style: italic; position: initial"
+          style="font-style: italic; position: initial"
         >
-          <h5 style="font-weight: 600">Covid19-react</h5>
+          <h5 style="font-weight: 600; color: #ffb700">Covid19-react</h5>
           <p style="font-weight: 500">
             A react application where you can check the corona virus cases all
             over India and World. You can also see graphical representation and
@@ -88,9 +71,9 @@
         />
         <div
           class="carousel-caption d-none d-md-block"
-          style="color: black; font-style: italic; position: initial"
+          style="font-style: italic; position: initial"
         >
-          <h5 style="font-weight: 600">Employee Details</h5>
+          <h5 style="font-weight: 600; color: #ffb700">Employee Details</h5>
           <p style="font-weight: 500">
             A react application for an organization where admin creates an
             employee by entering all the credentials required for an
@@ -109,9 +92,9 @@
         />
         <div
           class="carousel-caption d-none d-md-block"
-          style="color: black; font-style: italic; position: initial"
+          style="font-style: italic; position: initial"
         >
-          <h5 style="font-weight: 600">Get News</h5>
+          <h5 style="font-weight: 600; color: #ffb700">Get News</h5>
           <p style="font-weight: 500">
             An application where you can check the latest news based on
             categories like business, entertainment, sports, health, sceince and
@@ -125,29 +108,22 @@
       href="#carouselExampleIndicators"
       role="button"
       data-slide="prev"
-      style="color: black; font-weight: 600"
+      style="font-weight: 600"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <span class="sr-only">Previous</span>
     </a>
     <a
       class="carousel-control-next"
       href="#carouselExampleIndicators"
       role="button"
       data-slide="next"
-      style="color: black; font-weight: 600"
+      style="font-weight: 600"
     >
-      <span class="visually-hidden">Next</span>
+      <span class="sr-only">Next</span>
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </a>
   </div>
 </main>
-
-<!--Script for slideshow-->
-<script src="type/javascript">
-  $('.carousel').carousel({
-    interval: 2000
-  })
-</script>
 
 <%- include partials/footerNav.ejs %> %> <%- include partials/footer.ejs %>
