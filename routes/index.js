@@ -26,4 +26,8 @@ router.get("/contact", (req, res, next) => {
   res.render("contact", { title: "Contact" });
 });
 
+router.post("/home", (req, res, next) => {
+  res.render("home", { title: "Home" });
+});
+
 module.exports = router;
