@@ -1,9 +1,13 @@
 {
   "name": "portfolio-ejs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "nodemon -e js,json,ejs,html -w . -w public -w views server.js"
+  },
+  "engine": {
+    "node": "^14.15.4",
+    "npm": "^6.14.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -17,5 +21,18 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.7",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "Comp229 ejs-portfolio",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-balu/Portfolio-ejs.git"
+  },
+  "author": "Balu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p-balu/Portfolio-ejs/issues"
+  },
+  "homepage": "https://github.com/p-balu/Portfolio-ejs#readme"
 }
