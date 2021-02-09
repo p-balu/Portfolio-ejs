@@ -16,33 +16,33 @@
     </div>
 
     <!--Form -->
-    <div class="form-field">
+    <div class="form-field" >
        <h3>Fill this Form</h3>   
-       <div style="text-align: start;">
+       <form style="text-align: start;" id="form" action="/contact" method="POST">
          <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">First Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your FirstName">
+            <input type="text" class="form-control" value="" name="firstName" id="exampleFormControlInput1" placeholder="Enter your FirstName">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your LastName">
+            <input type="text" class="form-control" value="" name="lastName" id="exampleFormControlInput1" placeholder="Enter your LastName">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name@example.com">
+            <input type="email" class="form-control" value="" name="email" id="exampleFormControlInput1" placeholder="Enter your name@example.com">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Mobile No</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your mobile number with country-code">
+            <input type="number" class="form-control" value="" name="mobile" id="exampleFormControlInput1" placeholder="Enter your mobile number with country-code">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" value="" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
           <div class="mb-3 mt-3" style="display: flex;justify-content: center;">
-            <button type="button" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary"/>
           </div>
-       </div>
+        </form>
     </div>
     
    <!-- Connect with me links-->
