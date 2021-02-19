@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+let express = require("express");
+let router = express.Router();
+let mongoose = require("mongoose");
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+//connect to out user Model
+let Users = require("../models/users");
+
+/** Get route for the user authentication read operation */
+
+router.get("/", (req, res, next) => {
+  Users.find((err, User) => {
+    if (err) {
+      return console.log(err);
+    } else {
+      console.log(User);
+    }
+  });
 });
 
 module.exports = router;
