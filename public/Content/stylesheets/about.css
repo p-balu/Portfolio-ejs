@@ -1,0 +1,9 @@
+/* Changes to About.css
+Balachander Rao Palepu, 301170247, 07-02-2021
+*/
+
+.img-fluid {
+  border-radius: 50%;
+  height: 26rem;
+  margin-top: 1rem;
+}

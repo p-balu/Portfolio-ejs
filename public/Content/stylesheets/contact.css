@@ -3,3 +3,11 @@ Balachander Rao Palepu, 301170247, 07-02-2021
 */
 
 /* formField css*/
+.form-field {
+  border: 1px solid #c8cdd2;
+  border-radius: 5px;
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 3px 3px 4px 0 rgba(117, 124, 129, 0.12);
+  margin-bottom: 3%;
+}

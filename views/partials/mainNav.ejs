@@ -1,0 +1,51 @@
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(17, 24, 39); box-shadow: 1px 1px 5px 3px rgba(31, 41, 55);">
+  <a class="navbar-brand" style="color: white;" href="/"><img src="/Assets/images/cover.png" class="img-fluid" style="max-width: 6rem;border-radius:0;height: auto;margin: 0;" alt="logo"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+
+      <% if (title == "Home"){ %>
+      <li class="nav-item active" style="border-bottom:3px solid #ffb700;font-weight: 600;">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" style="color: white;" href="/home"> Home </a>
+      </li>
+
+      <% if (title == "About") { %>
+      <li class="nav-item active" style="border-bottom:3px solid #ffb700;font-weight: 600;">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" style="color: white;" href="/about"> About </a>
+      </li>
+
+      <% if (title == "Projects") { %>
+      <li class="nav-item active"  style="border-bottom:3px solid #ffb700;font-weight: 600;">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" style="color: white;" href="/projects"> Projects </a>
+      </li>
+
+      <% if (title == "Services") { %>
+      <li class="nav-item active"  style="border-bottom:3px solid #ffb700;font-weight: 600;">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" style="color: white;" href="/services">Services </a>
+      </li>
+
+      <% if (title == "Contact") { %>
+      <li class="nav-item active"  style="border-bottom:3px solid #ffb700;">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" style="color: white;" href="/contact"> Contact </a>
+      </li>
+  </div>
+</nav>
