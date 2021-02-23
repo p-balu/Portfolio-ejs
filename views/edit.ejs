@@ -1,0 +1,93 @@
+<%- include partials/header.ejs %> <%- include partials/mainNav.ejs %>
+<!-- Content for the Add page -->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1><%= title %></h1>
+
+      <form
+        class="form"
+        method="POST"
+        action="/business-contacts/edit/<%= contact._id%>"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Name"
+            name="name"
+            autocomplete="off"
+            value="<%= contact.name %>"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="contactName">Contact Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="contactName"
+            placeholder="Enter Contact Name"
+            name="contactName"
+            autocomplete="off"
+            value="<%= contact.contactName %>"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Email"
+            name="email"
+            autocomplete="off"
+            value="<%= contact.email %>"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="contactNumber">Contact Number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="contactNumber"
+            placeholder="Enter you Contact Number"
+            name="contactNumber"
+            autocomplete="off"
+            value="<%= contact.contactNumber %>"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="origanistaionName">Organisation</label>
+          <input
+            type="text"
+            class="form-control"
+            id="origanistaionName"
+            placeholder="Enter Organisation Name"
+            name="organisationName"
+            autocomplete="off"
+            value="<%= contact.organisationName %>"
+            required
+          />
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i> Update
+        </button>
+
+        <a href="/business-contacts" class="btn btn-warning">
+          <i class="fas fa-undo"></i> Cancel</a
+        >
+      </form>
+    </div>
+  </div>
+</div>
+<%- include partials/footerNav.ejs %> <%- include partials/footer.ejs %>

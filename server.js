@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-let app = require("./app");
-let debug = require("debug")("portfolio:server");
+let app = require("./config/app");
+let debug = require("debug")("contacts:server");
 let http = require("http");
 
 /**

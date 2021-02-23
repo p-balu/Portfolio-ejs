@@ -1,13 +1,14 @@
 let express = require("express");
 let router = express.Router();
 let mongoose = require("mongoose");
+const { ensureAuthenticated } = require("../config/auth");
 
 //connect to out contacts Model
 let Contact = require("../models/contacts");
 
 /** Get route for the contacts list--> read operation */
 
-router.get("/", (req, res, next) => {
+router.get("/", ensureAuthenticated, (req, res, next) => {
   Contact.find((err, ContactList) => {
     if (err) {
       return console.log(err);

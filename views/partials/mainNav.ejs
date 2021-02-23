@@ -47,5 +47,25 @@
       <% } %>
         <a class="nav-link" style="color: white;" href="/contact"> Contact </a>
       </li>
+
+      <% if (title == "Business Contacts" || title== "Add Contact"||title=="Edit Contact") { %>
+        <li class="nav-item active"  style="border-bottom:3px solid #ffb700;font-weight: 600;">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" style="color: white;" href="/business-contacts"> Business </a>
+        </li>
+        <% if (title == "Business Contacts" || title== "Add Contact"||title=="Edit Contact" ) { %>
+          <a class="nav-link" style="color: white;" href="/users/logout"> Logout </a>
+          <% } else  { %>
+          <% if (title == "Login") { %>
+          <li class="nav-item active"  style="border-bottom:3px solid #ffb700;">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" style="color: white;" href="/login"> Login </a>
+          </li>
+          <% } %>
+
   </div>
 </nav>
