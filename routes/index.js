@@ -167,7 +167,10 @@ router.get(
 
 /* GET Login page. */
 router.get("/login", function (req, res, next) {
-  res.render("login", { title: "Login", messages: req.flash("loginMessage") });
+  res.render("login", {
+    title: "Login",
+    messages: req.flash("loginMessage"),
+  });
 });
 
 module.exports = router;

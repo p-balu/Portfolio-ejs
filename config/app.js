@@ -17,6 +17,20 @@ let app = express();
 //database setup
 let mongoose = require("mongoose");
 let DB = require("./db");
+
+
+//point mongoose to the DB URI
+mongoose.connect(DB.URI, { useNewUrlParser: true, useUnifiedTopology: true });
+let mongoDB = mongoose.connection;
+mongoDB.on("error", console.error.bind(console, "Connection Error: "));
+mongoDB.once("open", () => {
+  console.log("Connected to mongoDB...");
+});
+
+//Bodypasrser
+app.use(express.urlencoded({ extended: false }));
+
+
 //Express Session({
 app.use(
   session({
@@ -30,20 +44,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(function (req, res, next) {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
 let indexRouter = require("../routes/index");
 let usersRouter = require("../routes/users");
 // let contactsRouter = require("../routes/contacts");
-
-//point mongoose to the DB URI
-mongoose.connect(DB.URI, { useNewUrlParser: true, useUnifiedTopology: true });
-let mongoDB = mongoose.connection;
-mongoDB.on("error", console.error.bind(console, "Connection Error: "));
-mongoDB.once("open", () => {
-  console.log("Connected to mongoDB...");
-});
-
-//Bodypasrser
-app.use(express.urlencoded({ extended: false }));
 
 // initialize flash
 app.use(flash());
