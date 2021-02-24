@@ -5,7 +5,7 @@ Balachander Rao Palepu, 301170247, 07-02-2021
 const LocalStrategy = require("passport-local").Strategy;
 
 // Load User model
-const User = require("../models/User");
+const User = require("../models/user");
 
 module.exports = function (passport) {
   passport.use(
