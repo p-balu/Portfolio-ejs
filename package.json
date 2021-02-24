@@ -29,7 +29,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "Comp229 ejs-portfolio",
-  "main": "./config/app.js",
+  "main": "server.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
