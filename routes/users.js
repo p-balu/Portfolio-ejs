@@ -9,10 +9,11 @@ router.post("/login", (req, res, next) => {
     successRedirect: "/business-contacts",
     failureRedirect: "/login",
     failureFlash: true,
+    failureMessage: req.flash("loginMessage", "Invalid username or password"),
   })(req, res, next);
 });
 
-// Logout
+// Logout handle
 router.get("/logout", (req, res) => {
   req.logout();
   req.session.destroy();

@@ -1,6 +1,7 @@
 let express = require("express");
 let router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
+let flash = require("connect-flash");
 
 let Contact = require("../models/contacts");
 
@@ -53,10 +54,7 @@ router.get("/business-contacts", ensureAuthenticated, (req, res, next) => {
           title: "Business Contacts",
           ContactList: ContactList,
           username: req.user.username,
-          messages: req.flash(
-            "loginMessage",
-            "You have to login to access to the secure site"
-          ),
+          messages: req.flash("message"),
         });
       }
     });
@@ -110,8 +108,8 @@ router.post("/business-contacts/add", ensureAuthenticated, (req, res, next) => {
       res.end(err);
     } else {
       // refresh the Business Contacts List
-      req.flash("Add", "Contact added Successfully");
-      res.redirect("/business-contacts");
+      req.flash("message", "Contact added succesfully"),
+        res.redirect("/business-contacts");
     }
   });
 });
@@ -142,7 +140,7 @@ router.post(
       } else {
         console.log("success");
         // refresh the Business Contacts List
-        req.flash("Edit", "Contact updated Successfully");
+        req.flash("message", "Contact updated Successfully");
         res.redirect("/business-contacts");
       }
     });
@@ -162,7 +160,7 @@ router.get(
         res.end(err);
       } else {
         // refresh the Business Contacts List
-        req.flash("Delete", "Contact deleted Successfully");
+        req.flash("message", "Contact deleted Successfully");
         res.redirect("/business-contacts");
       }
     });

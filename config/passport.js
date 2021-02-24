@@ -1,3 +1,7 @@
+/* passport.js
+Balachander Rao Palepu, 301170247, 07-02-2021
+*/
+
 const LocalStrategy = require("passport-local").Strategy;
 
 // Load User model
@@ -8,7 +12,7 @@ module.exports = function (passport) {
     new LocalStrategy(
       { usernameField: "username", passwordField: "password" },
       (username, password, done) => {
-        // Match user
+        // Check for user with username
         User.findOne({
           username: username,
         }).then((user) => {
