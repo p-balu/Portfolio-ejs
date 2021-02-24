@@ -48,7 +48,6 @@ app.use(function (req, res, next) {
 });
 let indexRouter = require("../routes/index");
 let usersRouter = require("../routes/users");
-// let contactsRouter = require("../routes/contacts");
 
 // initialize flash
 app.use(flash());
