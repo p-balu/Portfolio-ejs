@@ -18,7 +18,6 @@ let app = express();
 let mongoose = require("mongoose");
 let DB = require("./db");
 
-
 //point mongoose to the DB URI
 mongoose.connect(DB.URI, { useNewUrlParser: true, useUnifiedTopology: true });
 let mongoDB = mongoose.connection;
@@ -30,13 +29,16 @@ mongoDB.once("open", () => {
 //Bodypasrser
 app.use(express.urlencoded({ extended: false }));
 
-
 //Express Session({
 app.use(
   session({
     secret: "secret",
     resave: true,
     saveUnintialized: true,
+    cookie: {
+      secure: true,
+      maxAge: 3600000,
+    },
   })
 );
 

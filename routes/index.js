@@ -53,6 +53,10 @@ router.get("/business-contacts", ensureAuthenticated, (req, res, next) => {
           title: "Business Contacts",
           ContactList: ContactList,
           username: req.user.username,
+          messages: req.flash(
+            "loginMessage",
+            "You have to login to access to the secure site"
+          ),
         });
       }
     });
