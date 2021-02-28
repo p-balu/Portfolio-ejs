@@ -4,6 +4,7 @@ const { ensureAuthenticated } = require("../config/auth");
 let flash = require("connect-flash");
 
 let Contact = require("../models/contacts");
+let ContactMe = require("../models/contact");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -39,7 +40,25 @@ router.get("/contact", (req, res, next) => {
 router.post("/contact", (req, res, next) => {
   console.log("entered");
   console.log(req.body);
-  res.redirect("/home");
+
+  let newContact = ContactMe({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    mobile: req.body.mobile,
+    description: req.body.description,
+  });
+
+  ContactMe.create(newContact, (err, Contact) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      // redirect to home Page
+      req.flash("message", "I will get in touch with you"),
+        res.redirect("/home", { title: "Home" });
+    }
+  });
 });
 
 /* GET Business contacts page. */
