@@ -56,7 +56,7 @@ router.post("/contact", (req, res, next) => {
     } else {
       // redirect to home Page
       req.flash("message", "I will get in touch with you"),
-        res.redirect("/home", { title: "Home" });
+        res.redirect("/home");
     }
   });
 });

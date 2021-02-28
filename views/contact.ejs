@@ -22,27 +22,27 @@
        <form style="text-align: start;" id="form" action="/contact" method="POST">
         <div style="display: flex;justify-content: center;">
         <div class="mb-3 px-4 mt-2" style="width: 50%;">
-            <label for="exampleFormControlInput1" class="form-label font-weight-bold">First Name</label>
-            <input type="text" class="form-control" value="" name="firstName" id="exampleFormControlInput1" placeholder="Enter your FirstName">
+            <label for="firstName" class="form-label font-weight-bold">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="firstName" autocomplete="off" placeholder="Enter your FirstName" required>
           </div>
           <div class="mb-3 px-4" style="width: 50%;">
-            <label for="exampleFormControlInput1" class="form-label font-weight-bold">Last Name</label>
-            <input type="text" class="form-control" value="" name="lastName" id="exampleFormControlInput1" placeholder="Enter your LastName">
+            <label for="lastName" class="form-label font-weight-bold">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" autocomplete="off" placeholder="Enter your LastName" required>
           </div>
         </div>
         <div style="display: flex;justify-content: center;">
           <div class="mb-3 px-4" style="width: 50%;">
-            <label for="exampleFormControlInput1" class="form-label font-weight-bold">Email address</label>
-            <input type="email" class="form-control" value="" name="email" id="exampleFormControlInput1" placeholder="Enter your name@example.com">
+            <label for="email" class="form-label font-weight-bold">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" autocomplete="off" placeholder="Enter your name@example.com" required>
           </div>
           <div class="mb-3 px-4" style="width: 50%;">
-            <label for="exampleFormControlInput1" class="form-label font-weight-bold">Mobile No</label>
-            <input type="number" class="form-control" value="" name="mobile" id="exampleFormControlInput1" placeholder="Enter your mobile number with country-code">
+            <label for="mobile" class="form-label font-weight-bold">Mobile No</label>
+            <input type="number" class="form-control" name="mobile" id="mobile" autocomplete="off" placeholder="Enter your mobile number with country-code" required>
           </div>
           </div>
           <div class="mb-3 px-4">
-            <label for="exampleFormControlTextarea1" class="form-label font-weight-bold">Description</label>
-            <textarea class="form-control" value=""   placeholder="Enter your text here" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="description" class="form-label font-weight-bold">Description</label>
+            <textarea class="form-control" autocomplete="off" placeholder="Enter your text here" name="description" id="description" rows="3" required></textarea>
           </div>
           <div class="mb-3 mt-3" style="display: flex;justify-content: center;">
             <input type="submit" value="Submit" class="btn btn-primary"/>
@@ -70,4 +70,4 @@
     </div>
 </main>
 
-<%- include partials/footerNav.ejs %> %> <%- include partials/footer.ejs %>
+<%- include partials/footerNav.ejs %> <%- include partials/footer.ejs %>
